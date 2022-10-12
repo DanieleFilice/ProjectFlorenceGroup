@@ -5,7 +5,9 @@ import com.filicedaniele.projectFG.Data.UserRequest;
 import com.filicedaniele.projectFG.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 @RestController
@@ -45,6 +47,13 @@ public class UserController {
                                   @RequestParam(value = "cognome", required = false) String cognome){
         HashMap<String,Object> prop = new HashMap<>();
         prop.put("users: ",userservice.get(nome,cognome));
+        return ResponseEntity.ok(prop);
+    }
+
+    @PostMapping("/importCsv")
+    public  ResponseEntity<?> insertUsersByCsv(@RequestParam("file")MultipartFile file) throws IOException {
+        HashMap<String,Object> prop = new HashMap<>();
+        prop.put("users added: ",userservice.addUsersCsv(file));
         return ResponseEntity.ok(prop);
     }
 }

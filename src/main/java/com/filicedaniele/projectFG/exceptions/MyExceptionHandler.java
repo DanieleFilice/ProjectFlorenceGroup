@@ -24,5 +24,9 @@ public class MyExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<?> usersNotFound(RuntimeException e){
         return  ResponseEntity.status(HttpStatus.NOT_FOUND).body("non sono presenti utenti");
     }
+    @ExceptionHandler({MalformedFileException.class})
+    public ResponseEntity<?> malformedFile(RuntimeException e){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Il file .csv non è nel formato atteso");
+    }
 
 }

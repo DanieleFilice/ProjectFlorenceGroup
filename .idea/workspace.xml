@@ -4,48 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dcbd89d-5c0d-4660-9d9c-282a1a866ecc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projectFG.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/IRestMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/RestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/RestMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/UserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/MyExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/UserAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/UsersNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0dcbd89d-5c0d-4660-9d9c-282a1a866ecc" name="Default Changelist" comment="Creata la struttura delle folder e implementati i servizi REST per user">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectFG.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/MalformedFileException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/ProjectFgApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/ProjectFgApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/MyExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/exceptions/MyExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,11 +99,44 @@
       <option name="presentableId" value="Default" />
       <updated>1665572887558</updated>
     </task>
+    <task id="LOCAL-00001" summary="Creata la struttura delle folder e implementati i servizi REST per user">
+      <created>1665593518854</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665593518854</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -140,7 +144,16 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creata la struttura delle folder e implementati i servizi REST per user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creata la struttura delle folder e implementati i servizi REST per user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1665588881345">
@@ -155,42 +168,46 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="416" height="466" key="DebuggerActiveHint/0.0.1920.1050@0.0.1920.1050" timestamp="1665586604701" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1665593063915">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1665597699714">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1665593063915" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1665593063915">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1665597699714" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1665597699713">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1665593063915" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1665593063914">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1665597699713" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1665597699713">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1665593063914" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1665593063915">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1665597699713" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1665597699713">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1665593063915" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1665592217690">
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1665597699713" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1665596163773">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1665592217690" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1665592217690">
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1665596163773" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1665596163773">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1665592217690" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1665592217689">
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1665596163772" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1665596163772">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1665592217689" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1665592217690">
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1665596163772" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1665596163773">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1665592217690" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1665596163773" />
     <state x="440" y="99" key="SettingsEditor" timestamp="1665582121810">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1665582121810" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1665593540097">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1665593540097" />
     <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1665589698486">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -200,34 +217,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>48</line>
+          <line>47</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>40</line>
+          <line>39</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

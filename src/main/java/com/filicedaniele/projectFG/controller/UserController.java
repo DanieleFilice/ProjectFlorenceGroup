@@ -24,21 +24,21 @@ public class UserController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody UserRequest request){
         HashMap<String,Object> prop = new HashMap<>();
-        prop.put("user created",userservice.create(request));
+        prop.put("user_created",userservice.create(request));
         return ResponseEntity.ok(prop);
     }
 
     @PatchMapping
     public ResponseEntity<?> update(@RequestBody UserRequest request){
         HashMap<String,Object> prop = new HashMap<>();
-        prop.put("user updated",userservice.update(request));
+        prop.put("user_updated",userservice.update(request));
         return ResponseEntity.ok(prop);
     }
 
     @DeleteMapping
     public ResponseEntity<?> delete(@RequestParam("email") String email){
         HashMap<String,Object> prop = new HashMap<>();
-        prop.put("user deleted",userservice.delete(email));
+        prop.put("user_deleted",userservice.delete(email));
         return ResponseEntity.ok(prop);
     }
 
@@ -46,14 +46,14 @@ public class UserController {
     public  ResponseEntity<?> get(@RequestParam(value = "nome", required = false)  String nome,
                                   @RequestParam(value = "cognome", required = false) String cognome){
         HashMap<String,Object> prop = new HashMap<>();
-        prop.put("users: ",userservice.get(nome,cognome));
+        prop.put("users",userservice.get(nome,cognome));
         return ResponseEntity.ok(prop);
     }
 
     @PostMapping("/importCsv")
     public  ResponseEntity<?> insertUsersByCsv(@RequestParam("file")MultipartFile file) throws IOException {
         HashMap<String,Object> prop = new HashMap<>();
-        prop.put("users added: ",userservice.addUsersCsv(file));
+        prop.put("users_added",userservice.addUsersCsv(file));
         return ResponseEntity.ok(prop);
     }
 }

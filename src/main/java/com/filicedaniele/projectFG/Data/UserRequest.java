@@ -2,12 +2,16 @@ package com.filicedaniele.projectFG.Data;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.istack.NotNull;
 
 
 public class UserRequest {
 
+    @NotNull
     private String nome;
+    @NotNull
     private String cognome;
+    @NotNull
     private String email;
 
     public UserRequest() {

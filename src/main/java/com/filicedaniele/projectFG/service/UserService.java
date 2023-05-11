@@ -35,12 +35,16 @@ public class UserService {
     }
 
 
+
+
     public UserDto create(UserRequest u){
 
         if(userRepository.existsByEmail(u.getEmail()))
             throw new UserAlreadyExistException();
 
-        return modelMapper.map(userRepository.save(new User(u.getNome(),u.getCognome(),u.getEmail())),UserDto.class);
+        Long id =  !userRepository.findAll().isEmpty() ?userRepository.findAll().stream().max((a, b) -> a.getId().compareTo(b.getId())).get().getId() + 1L : 1L;
+
+        return modelMapper.map(userRepository.save(new User(u.getNome(),u.getCognome(),u.getEmail(),id)),UserDto.class);
     }
 
     public UserDto update(UserRequest u){
@@ -75,31 +79,8 @@ public class UserService {
 
     }
 
-    public List<UserDto> addUsersCsv(MultipartFile file) throws IOException {
 
-        List<User> users = new ArrayList<>();
-        InputStream inputStream = file.getInputStream();
-        new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
-                .lines()
-                .forEach(l -> users.add(processLine(l)));
-
-        if(users == null) throw new UsersNotFound();
-
-        for (User u : users) {
-            if(userRepository.existsByEmail(u.getEmail()))
-                throw new UserAlreadyExistException();
-        }
-        userRepository.saveAll(users);
-
-
-        return users.stream().map(x -> modelMapper.map(x,UserDto.class)).collect(Collectors.toList());
-
-    }
-
-    private User processLine(String s) {
-
-        List<String> riga = Arrays.asList(s.split(";"));
-        if(riga.size() != 3) throw new MalformedFileException();
-        return new User(riga.get(0),riga.get(1),riga.get(2));
-    }
 }
+
+
+

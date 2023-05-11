@@ -13,11 +13,19 @@ public class UserDto {
     private String nome;
     private String cognome;
     private String email;
+    private Long id;
 
     public UserDto(String nome, String cognome, String email) {
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
+    }
+
+    public UserDto(String nome, String cognome, String email,Long id) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.email = email;
+        this.id = id;
     }
 
     public UserDto() {

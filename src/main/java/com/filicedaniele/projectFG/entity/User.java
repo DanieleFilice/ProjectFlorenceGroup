@@ -12,7 +12,6 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "NOME")
@@ -29,6 +28,13 @@ public class User {
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
+    }
+
+    public User(String nome, String cognome, String email,Long id) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.email = email;
+        this.id = id;
     }
 
     public User() {
@@ -62,6 +68,16 @@ public class User {
     @JsonProperty("email")
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @JsonProperty("id")
+    public Long getId() {
+        return id;
+    }
+
+    @JsonProperty("id")
+    public void setId(Long id) {
+        this.id = id;
     }
 
 

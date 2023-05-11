@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 @RestController
@@ -47,13 +50,6 @@ public class UserController {
                                   @RequestParam(value = "cognome", required = false) String cognome){
         HashMap<String,Object> prop = new HashMap<>();
         prop.put("users",userservice.get(nome,cognome));
-        return ResponseEntity.ok(prop);
-    }
-
-    @PostMapping("/importCsv")
-    public  ResponseEntity<?> insertUsersByCsv(@RequestParam("file")MultipartFile file) throws IOException {
-        HashMap<String,Object> prop = new HashMap<>();
-        prop.put("users_added",userservice.addUsersCsv(file));
         return ResponseEntity.ok(prop);
     }
 }

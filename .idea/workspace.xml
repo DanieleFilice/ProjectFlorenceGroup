@@ -8,14 +8,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dcbd89d-5c0d-4660-9d9c-282a1a866ecc" name="Default Changelist" comment="set app.properties per il container">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/filicedaniele/projectFG/ProjectFGControllerCRUDTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/filicedaniele/projectFG/ProjectFgServiceTest.java" afterDir="false" />
+    <list default="true" id="0dcbd89d-5c0d-4660-9d9c-282a1a866ecc" name="Default Changelist" comment="Inseriti test su IoC component e Controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/Data/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/filicedaniele/projectFG/ProjectFgApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/filicedaniele/projectFG/ProjectFgApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +66,8 @@
     <option name="myCommands">
       <command value="mvn -U idea:idea" />
       <command value="mvn package" />
-      <command value="mvn clean package" />
       <command value="mvn clean install" />
+      <command value="mvn clean package" />
     </option>
   </component>
   <component name="RunManager" selected="Application.ProjectFgApplication">
@@ -78,6 +77,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.filicedaniele.projectFG.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.filicedaniele.projectFG.controller.UserController" />
+      <module name="projectFG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.filicedaniele.projectFG.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,29 +143,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectFgServiceTest.testFindAllEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="projectFG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.filicedaniele.projectFG.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.filicedaniele.projectFG" />
-      <option name="MAIN_CLASS_NAME" value="com.filicedaniele.projectFG.ProjectFgServiceTest" />
-      <option name="METHOD_NAME" value="testFindAllEmployees" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProjectFgApplication" />
+        <item itemvalue="Application.UserController" />
         <item itemvalue="JUnit.ProjectFGControllerCRUDTest" />
         <item itemvalue="JUnit.ProjectFgApplicationTests" />
         <item itemvalue="JUnit.ProjectFgServiceTest.testCreateUser" />
-        <item itemvalue="JUnit.ProjectFgServiceTest.testFindAllEmployees" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665653449434</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Inseriti test su IoC component e Controller">
+      <created>1665665575796</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665665575797</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -246,127 +249,74 @@
     <MESSAGE value="Creata la struttura delle folder e implementati i servizi REST per user" />
     <MESSAGE value="Aggiunta API che inserisce in modo massivo gli utenti tramite .csv nel body" />
     <MESSAGE value="set app.properties per il container" />
-    <option name="LAST_COMMIT_MESSAGE" value="set app.properties per il container" />
+    <MESSAGE value="Inseriti test su IoC component e Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inseriti test su IoC component e Controller" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1665588881345">
+    <state x="765" y="209" key="#com.intellij.ide.util.MemberChooser" timestamp="1683837802463">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1665588881345" />
-    <state x="727" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1665601639850">
+    <state x="765" y="209" key="#com.intellij.ide.util.MemberChooser/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683837802463" />
+    <state width="415" height="466" key="DebuggerActiveHint" timestamp="1683824355042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="727" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1665601639850" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1665584612313">
+    <state width="415" height="466" key="DebuggerActiveHint/0.0.1920.1050@0.0.1920.1050" timestamp="1683824355042" />
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1683823130206">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1665584612313" />
-    <state width="416" height="466" key="DebuggerActiveHint" timestamp="1665586604701">
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1683823130206" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1683838370777">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="416" height="466" key="DebuggerActiveHint/0.0.1920.1050@0.0.1920.1050" timestamp="1665586604701" />
-    <state x="-14" y="55" width="1736" height="866" key="DiffContextDialog" timestamp="1665656535832">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1683825039040" />
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370777" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1683838370777">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="-14" y="55" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1665656535832" />
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1665664779115">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1683825039040" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370777" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1683838370777">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779115" />
-    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1665664779114">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1683825039040" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370777" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1683838370777">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779114" />
-    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1665664779114">
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1683825039040" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370777" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1683838370778">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779114" />
-    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1665664779115">
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1683824412574" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370778" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1683838370778">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779115" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1665664779116">
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1683824412574" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370778" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1683838370778">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779116" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1665664779115">
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1683824412574" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370778" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1683838370778">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779115" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1665664779115">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779115" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1665664779115">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1665664779115" />
-    <state x="440" y="99" key="SettingsEditor" timestamp="1665598681834">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1665598681834" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1665599272616">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1665599272616" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1665653458678">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1665653458678" />
-    <state x="667" y="124" width="585" height="801" key="find.popup" timestamp="1665598700466">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="667" y="124" width="585" height="801" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1665598700466" />
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1665656068023">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1665656068023" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1665664038411">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1665664038411" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1683824412574" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/1920.0.1536.840/0.0.1920.1050@0.0.1920.1050" timestamp="1683838370778" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/controller/UserController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>39</line>
+          <line>41</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/filicedaniele/projectFG/service/UserService.java</url>
-          <line>61</line>
+          <line>65</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
